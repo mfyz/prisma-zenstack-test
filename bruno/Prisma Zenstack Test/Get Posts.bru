@@ -1,0 +1,15 @@
+meta {
+  name: Get Posts
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/model/post/findMany?q={"where":{"published":true},"include":{"author":true}}
+  body: none
+  auth: none
+}
+
+query {
+  q: {"where":{"published":true},"include":{"author":true}}
+}

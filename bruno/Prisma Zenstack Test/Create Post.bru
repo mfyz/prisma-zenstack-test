@@ -1,0 +1,20 @@
+meta {
+  name: Create Post
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/model/post
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "data": {
+          "title": "Post 1",
+          "author": { "connect": { "id": 1 } }
+      }
+  }
+}
